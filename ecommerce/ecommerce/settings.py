@@ -34,6 +34,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'core',
+
+    'crispy_forms',
+    "crispy_bootstrap5",
 ]
 
 MIDDLEWARE = [
@@ -150,4 +153,12 @@ if DEBUG is False:
             'PORT':''
         }
     }
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
+DEFAULT_FROM_EMAIL = env('DEFAULT_FROM_EMAIL')
+NOTIFY_EMAIL = env('NOTIFY_EMAIL')
 
